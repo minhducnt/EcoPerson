@@ -14,10 +14,10 @@ import '../styles/app_theme.dart';
 @immutable
 class AppConfig {
   //* Language
-  static const defaultLanguageCode = 'vi';
-  static const defaultIsoCountryCode = 'VN';
-  static const alternativeLanguageCode = 'en';
-  static const alternativeIsoCountryCode = 'EN';
+  static const defaultLanguageCode = 'en';
+  static const defaultIsoCountryCode = 'EN';
+  static const alternativeLanguageCode = 'vi';
+  static const alternativeIsoCountryCode = 'VN';
 
   final defaultLocale = const Locale(
     defaultLanguageCode,
@@ -32,8 +32,8 @@ class AppConfig {
   late final box = AppStoreKeys();
   late final keys = AppFormKeys();
   late final styles = AppTextStyles();
-  late final color = AppColorStyles();
+  late final theme = AppColorStyles();
   late final times = AppTimes();
-  late final theme = AppTheme.mainTheme();
+  late final defaultTheme = AppTheme.mainTheme();
   late final env = kDebugMode ? DevEnv() : ProdEnv();
 }

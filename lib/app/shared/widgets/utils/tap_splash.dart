@@ -21,9 +21,9 @@ class TapSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: $r.color.transparent,
+      color: $r.theme.transparent,
       child: InkWell(
-        splashColor: $r.color.grey,
+        splashColor: $r.theme.grey,
         borderRadius:
             customBorderRadius ?? BorderRadius.all(Radius.circular(radius)),
         overlayColor: WidgetStateProperty.all(

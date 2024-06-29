@@ -27,6 +27,17 @@ workflows:
       - |
         #!/bin/bash
 
+        # Flutter build commands for Android
+        flutter clean
+        flutter pub get
+        flutter build apk --release
+
+        # Move the generated APK to the desired location
+        mv build/app/outputs/flutter-apk/app-release.apk build/outputs/bundle/app-release.apk
+
+      - |
+        #!/bin/bash
+
         # Flutter build commands for iOS
         flutter clean
         flutter pub get
@@ -43,17 +54,6 @@ workflows:
 
         # Move the .ipa file to the desired location
         mv build/ios/Runner.ipa build/outputs/bundle/Runner.ipa
-
-      - |
-        #!/bin/bash
-
-        # Flutter build commands for Android
-        flutter clean
-        flutter pub get
-        flutter build apk --release
-
-        # Move the generated APK to the desired location
-        mv build/app/outputs/flutter-apk/app-release.apk build/outputs/bundle/app-release.apk
 
     artifacts:
       - build/**/outputs/bundle/**/*.ipa

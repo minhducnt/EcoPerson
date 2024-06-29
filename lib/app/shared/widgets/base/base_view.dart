@@ -52,13 +52,13 @@ abstract class BaseView<Controller extends BaseController>
     return Container(
       width: double.infinity,
       height: double.infinity,
-      color: $r.color.black.withOpacity(0.7),
+      color: $r.theme.black.withOpacity(0.7),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LoadingSpinner(
-              color: $r.color.white,
+              color: $r.theme.white,
             ),
             SizedBox(height: 16.h),
             Obx(
@@ -66,7 +66,7 @@ abstract class BaseView<Controller extends BaseController>
                 controller.loadingText.value,
                 style: $r.styles.pSemiBold.copyWith(
                   fontSize: 16,
-                  color: $r.color.white,
+                  color: $r.theme.white,
                 ),
               ),
             ),

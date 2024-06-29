@@ -41,7 +41,7 @@ class SkeletonLoader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = $r.color.grey;
+    final colorScheme = $r.theme.grey;
     final shimmerDirection = getDirection(direction);
 
     return isActive
