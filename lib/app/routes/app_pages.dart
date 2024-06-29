@@ -7,16 +7,16 @@ import '../modules/auth/register/bindings/register_binding.dart';
 import '../modules/auth/register/views/register_view.dart';
 import '../modules/auth/splash/bindings/splash_binding.dart';
 import '../modules/auth/splash/views/splash_view.dart';
+import '../modules/auth/verification/bindings/verification_binding.dart';
+import '../modules/auth/verification/views/verification_view.dart';
 import '../modules/home/chat/bindings/chat_binding.dart';
 import '../modules/home/chat/views/chat_view.dart';
 import '../modules/home/homepage/bindings/homepage_binding.dart';
 import '../modules/home/homepage/views/homepage_view.dart';
-import '../modules/home/map/bindings/map_binding.dart';
-import '../modules/home/map/views/map_view.dart';
 import '../modules/home/notification/bindings/notification_binding.dart';
 import '../modules/home/notification/views/notification_view.dart';
-import '../modules/auth/verification/bindings/verification_binding.dart';
-import '../modules/auth/verification/views/verification_view.dart';
+import '../modules/home/map_gps/bindings/map_gps_binding.dart';
+import '../modules/home/map_gps/views/map_gps_view.dart';
 
 part 'app_routes.dart';
 
@@ -69,10 +69,11 @@ class AppPages {
       page: () => const ChatView(),
       binding: ChatBinding(),
     ),
+
     GetPage(
-      name: _Paths.MAP,
-      page: () => const MapView(),
-      binding: MapBinding(),
+      name: _Paths.MAP_GPS,
+      page: () => const MapGpsView(),
+      binding: MapGpsBinding(),
     ),
   ];
 }

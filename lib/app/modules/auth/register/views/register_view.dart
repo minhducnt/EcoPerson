@@ -152,6 +152,10 @@ class RegisterView extends BaseSilverView<RegisterController> {
                                                   FluentIcons.person_20_regular,
                                               // validator: AppValidator.required,
                                               keyBoardType: TextInputType.text,
+                                              onChanged: (value) =>
+                                                  controller.markFieldFilled(
+                                                'username',
+                                              ),
                                             ),
                                             const Gap(8),
 
@@ -180,6 +184,10 @@ class RegisterView extends BaseSilverView<RegisterController> {
                                                 //     AppValidator.required,
                                                 inputAction:
                                                     TextInputAction.done,
+                                                onChanged: (value) =>
+                                                    controller.markFieldFilled(
+                                                  'password',
+                                                ),
                                               ),
                                             ),
 
@@ -194,6 +202,11 @@ class RegisterView extends BaseSilverView<RegisterController> {
                                                   FluentIcons.mail_20_regular,
                                               keyBoardType:
                                                   TextInputType.emailAddress,
+                                              // validator: AppValidator.required,
+                                              onChanged: (value) =>
+                                                  controller.markFieldFilled(
+                                                'email',
+                                              ),
                                             ),
                                           ],
                                         ),

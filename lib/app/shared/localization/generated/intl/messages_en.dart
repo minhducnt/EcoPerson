@@ -32,6 +32,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "clearForm": MessageLookupByLibrary.simpleMessage("Clear"),
         "close": MessageLookupByLibrary.simpleMessage("Close"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "currentLocation":
+            MessageLookupByLibrary.simpleMessage("Current location"),
         "daysAgo": MessageLookupByLibrary.simpleMessage("days ago"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
@@ -40,6 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailInvalid":
             MessageLookupByLibrary.simpleMessage("Email is invalid"),
+        "emptyChat": MessageLookupByLibrary.simpleMessage("No chat found!"),
+        "emptyMap": MessageLookupByLibrary.simpleMessage("No map found!"),
         "emptyNotification":
             MessageLookupByLibrary.simpleMessage("No notification found!"),
         "enterYourCode":
@@ -82,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "resentCode": MessageLookupByLibrary.simpleMessage("Resend code"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "searchLocation":
+            MessageLookupByLibrary.simpleMessage("Search location"),
         "secondsAgo": MessageLookupByLibrary.simpleMessage("seconds ago"),
         "somethingWentWrongAgain": MessageLookupByLibrary.simpleMessage(
             "Something went wrong, please try again later"),

@@ -1,7 +1,6 @@
 {
-  "api": {},
   "auth": {
-    "angelhackhcm9d3c195b": {
+    "angelhackhcm4682338a": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {

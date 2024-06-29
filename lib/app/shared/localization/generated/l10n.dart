@@ -629,6 +629,46 @@ class I10n {
       args: [],
     );
   }
+
+  /// `No chat found!`
+  String get emptyChat {
+    return Intl.message(
+      'No chat found!',
+      name: 'emptyChat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No map found!`
+  String get emptyMap {
+    return Intl.message(
+      'No map found!',
+      name: 'emptyMap',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current location`
+  String get currentLocation {
+    return Intl.message(
+      'Current location',
+      name: 'currentLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search location`
+  String get searchLocation {
+    return Intl.message(
+      'Search location',
+      name: 'searchLocation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<I10n> {

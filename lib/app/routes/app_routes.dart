@@ -8,9 +8,9 @@ abstract class Routes {
   static const HOMEPAGE = _Paths.HOMEPAGE;
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const CHAT = _Paths.CHAT;
-  static const MAP = _Paths.MAP;
   static const REGISTER = _Paths.REGISTER;
   static const VERIFICATION = _Paths.VERIFICATION;
+  static const MAP_GPS = _Paths.MAP_GPS;
 }
 
 abstract class _Paths {
@@ -20,7 +20,7 @@ abstract class _Paths {
   static const HOMEPAGE = '/homepage';
   static const NOTIFICATION = '/notification';
   static const CHAT = '/chat';
-  static const MAP = '/map';
   static const REGISTER = '/register';
   static const VERIFICATION = '/verification';
+  static const MAP_GPS = '/map-gps';
 }

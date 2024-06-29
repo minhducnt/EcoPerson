@@ -24,7 +24,12 @@ class SplashController extends GetxController {
 
     final isSignedIn = await isUserSignedIn();
     if (isSignedIn) {
-      await Get.offNamed(Routes.HOMEPAGE);
+      await Get.offNamed(
+        Routes.HOMEPAGE,
+        arguments: {
+          'currentLocation': await $location.getPosition(),
+        },
+      );
     } else {
       await Get.offNamed(Routes.LOGIN);
     }

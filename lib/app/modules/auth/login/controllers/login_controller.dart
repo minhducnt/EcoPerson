@@ -67,9 +67,6 @@ class LoginController extends BaseController {
         password: formKey.fields['password']?.value.trim() ?? '',
       );
       await _handleSignInResult(result);
-
-      //
-      await Get.offNamed(Routes.HOMEPAGE);
     } on AuthException catch (e) {
       updateErrorMessage(e.message);
     } finally {
@@ -85,19 +82,35 @@ class LoginController extends BaseController {
       case AuthSignInStep.confirmSignInWithSmsMfaCode:
         final codeDeliveryDetails = result.nextStep.codeDeliveryDetails!;
         _handleCodeDelivery(codeDeliveryDetails);
+
+      //
       case AuthSignInStep.confirmSignInWithNewPassword:
         safePrint('Enter a new password to continue signing in');
+
+      //
       case AuthSignInStep.confirmSignInWithCustomChallenge:
         final parameters = result.nextStep.additionalInfo;
         final prompt = parameters['prompt']!;
         safePrint(prompt);
+
+      //
       case AuthSignInStep.confirmSignUp:
         final resendResult = await Amplify.Auth.resendSignUpCode(
           username: formKey.fields['username']?.value.trim() ?? '',
         );
         _handleCodeDelivery(resendResult.codeDeliveryDetails);
+
+      //
       case AuthSignInStep.done:
         safePrint('Sign in is complete');
+        //
+        await Get.offNamed(
+          Routes.HOMEPAGE,
+          arguments: {
+            'currentLocation': await $location.getPosition(),
+          },
+        );
+
       //
       case AuthSignInStep.continueSignInWithMfaSelection:
       case AuthSignInStep.continueSignInWithTotpSetup:

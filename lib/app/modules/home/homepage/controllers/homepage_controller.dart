@@ -6,8 +6,8 @@ import 'package:get/get.dart';
 import 'package:heroicons/heroicons.dart';
 
 import 'package:angelhack_hcm/app/data/di.dart';
+import 'package:angelhack_hcm/app/modules/home/map_gps/views/map_gps_view.dart';
 import 'package:angelhack_hcm/app/modules/home/notification/views/notification_view.dart';
-import 'package:angelhack_hcm/app/modules/home/map/views/map_view.dart';
 import 'package:angelhack_hcm/app/shared/constants/enums/systems.dart';
 import 'package:angelhack_hcm/app/shared/utils/ui_utils.dart';
 import 'package:angelhack_hcm/app/shared/utils/utils.dart';
@@ -41,7 +41,7 @@ class HomepageController extends BaseController
       title: localeLang.map,
       icon: HeroIcons.globeAsiaAustralia,
       iconSize: 22.sp,
-      widget: const MapView(),
+      widget: const MapGpsView(),
     ),
     HomeTabInfo(
       title: localeLang.notification,
@@ -89,7 +89,6 @@ class HomepageController extends BaseController
 
   Future<void> getInAppSystem() async {
     pageController = PageController();
-    // await $storage.auth.getAccountData();
   }
 }
 

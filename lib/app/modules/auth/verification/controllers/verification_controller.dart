@@ -42,7 +42,7 @@ class VerificationController extends BaseController {
   }
 
   Future<void> onInitData() async {
-    username.value = args['username'];
+    username.value = args['email'];
   }
 
   Future<void> backToSignUp() async {

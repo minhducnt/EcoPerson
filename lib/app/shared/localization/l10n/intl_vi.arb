@@ -123,5 +123,15 @@
 	"@weeksAgo": {},
 	"@_NOTIFICATION": {},
 	"emptyNotification": "Không có thông báo nào",
-	"@emptyNotification": {}
+	"@emptyNotification": {},
+	"@_CHAT": {},
+	"emptyChat": "Không có trò chuyện nào",
+	"@emptyChat": {},
+	"@_MAP": {},
+	"emptyMap": "Không có bản đồ nào",
+	"@emptyMap": {},
+	"currentLocation": "Vị trí hiện tại",
+	"@currentLocation": {},
+	"searchLocation": "Tìm kiếm...",
+	"@searchLocation": {}
 }

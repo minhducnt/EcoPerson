@@ -33,6 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "clearForm": MessageLookupByLibrary.simpleMessage("Xóa"),
         "close": MessageLookupByLibrary.simpleMessage("Đóng"),
         "confirm": MessageLookupByLibrary.simpleMessage("Xác nhận"),
+        "currentLocation":
+            MessageLookupByLibrary.simpleMessage("Vị trí hiện tại"),
         "daysAgo": MessageLookupByLibrary.simpleMessage("ngày trước"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Chưa có tài khoản?"),
@@ -41,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailInvalid":
             MessageLookupByLibrary.simpleMessage("Email không hợp lệ"),
+        "emptyChat":
+            MessageLookupByLibrary.simpleMessage("Không có trò chuyện nào"),
+        "emptyMap": MessageLookupByLibrary.simpleMessage("Không có bản đồ nào"),
         "emptyNotification":
             MessageLookupByLibrary.simpleMessage("Không có thông báo nào"),
         "enterYourCode":
@@ -87,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Trường này là bắt buộc"),
         "resentCode": MessageLookupByLibrary.simpleMessage("Gửi lại mã"),
         "search": MessageLookupByLibrary.simpleMessage("Tìm kiếm"),
+        "searchLocation": MessageLookupByLibrary.simpleMessage("Tìm kiếm..."),
         "secondsAgo": MessageLookupByLibrary.simpleMessage("giây trước"),
         "somethingWentWrongAgain": MessageLookupByLibrary.simpleMessage(
             "Có lỗi xảy ra, vui lòng thử lại sau"),

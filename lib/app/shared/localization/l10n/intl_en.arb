@@ -122,5 +122,15 @@
 	"@weeksAgo": {},
 	"@_NOTIFICATION": {},
 	"emptyNotification": "No notification found!",
-	"@emptyNotification": {}
+	"@emptyNotification": {},
+	"@_CHAT": {},
+	"emptyChat": "No chat found!",
+	"@emptyChat": {},
+	"@_MAP": {},
+	"emptyMap": "No map found!",
+	"@emptyMap": {},
+	"currentLocation": "Current location",
+	"@currentLocation": {},
+	"searchLocation": "Search location",
+	"@searchLocation": {}
 }

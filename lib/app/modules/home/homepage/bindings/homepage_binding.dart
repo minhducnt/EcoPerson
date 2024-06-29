@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
 import '../../chat/controllers/chat_controller.dart';
+import '../../map_gps/controllers/map_gps_controller.dart';
 import '../../notification/controllers/notification_controller.dart';
-
 import '../controllers/homepage_controller.dart';
 
 class HomepageBinding extends Bindings {
@@ -17,6 +17,9 @@ class HomepageBinding extends Bindings {
       )
       ..lazyPut<NotificationController>(
         () => NotificationController(),
+      )
+      ..lazyPut<MapGpsController>(
+        () => MapGpsController(),
       );
   }
 }
