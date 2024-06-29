@@ -77,10 +77,11 @@ class HomepageView extends BaseSilverView<HomepageController> {
             ),
           ),
           floatingActionButton: FloatingActionButton(
+            heroTag: 'chat',
             backgroundColor: Theme.of(context).colorScheme.primary,
             elevation: 1,
             materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            onPressed: () {},
+            onPressed: controller.onNavigateChat,
             shape: const CircleBorder(),
             tooltip: localeLang.chat,
             child: HeroIcon(

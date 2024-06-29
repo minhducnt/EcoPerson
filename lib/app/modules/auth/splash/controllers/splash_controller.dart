@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
 
 import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
 
 import '../../../../data/di.dart';
@@ -24,6 +25,9 @@ class SplashController extends GetxController {
 
     final isSignedIn = await isUserSignedIn();
     if (isSignedIn) {
+      final deviceToken = await FirebaseMessaging.instance.getToken() ?? '';
+      $log.i(deviceToken);
+
       await Get.offNamed(
         Routes.HOMEPAGE,
         arguments: {

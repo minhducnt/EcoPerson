@@ -45,19 +45,6 @@ class $AssetsAnimationsGen {
       [alert, confirm, error, maintenance, noDataFound, noNotificationFound];
 }
 
-class $AssetsEnvGen {
-  const $AssetsEnvGen();
-
-  /// File path: assets/env/.development.env
-  String get aDevelopment => 'assets/env/.development.env';
-
-  /// File path: assets/env/.production.env
-  String get aProduction => 'assets/env/.production.env';
-
-  /// List of all assets
-  List<String> get values => [aDevelopment, aProduction];
-}
-
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -75,6 +62,9 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/background_pattern.svg
   SvgGenImage get backgroundPattern =>
       const SvgGenImage('assets/svgs/background_pattern.svg');
+
+  /// File path: assets/svgs/chatbot.svg
+  SvgGenImage get chatbot => const SvgGenImage('assets/svgs/chatbot.svg');
 
   /// File path: assets/svgs/vectorCurved1.svg
   SvgGenImage get vectorCurved1 =>
@@ -95,6 +85,7 @@ class $AssetsSvgsGen {
   /// List of all assets
   List<SvgGenImage> get values => [
         backgroundPattern,
+        chatbot,
         vectorCurved1,
         vectorCurved2,
         vectorCurved3,
@@ -106,7 +97,6 @@ class Assets {
   Assets._();
 
   static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
-  static const $AssetsEnvGen env = $AssetsEnvGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsSvgsGen svgs = $AssetsSvgsGen();
 }

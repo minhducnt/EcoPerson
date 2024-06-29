@@ -19,6 +19,7 @@ Future<void> main() async {
       );
 
       await $log.initLogger();
+      await $notification.initNotification();
 
       runApp(const MyApp());
     },

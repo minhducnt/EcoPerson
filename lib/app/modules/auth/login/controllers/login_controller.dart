@@ -1,6 +1,7 @@
-import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
 
+import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 
@@ -60,6 +61,9 @@ class LoginController extends BaseController {
     if (!formKey!.validate()) return;
 
     showLoading();
+
+    final deviceToken = await FirebaseMessaging.instance.getToken() ?? '';
+    $log.i(deviceToken);
 
     try {
       final result = await Amplify.Auth.signIn(

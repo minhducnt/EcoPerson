@@ -1,3 +1,4 @@
+import 'package:angelhack_hcm/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -89,6 +90,10 @@ class HomepageController extends BaseController
 
   Future<void> getInAppSystem() async {
     pageController = PageController();
+  }
+
+  Future<void> onNavigateChat() async {
+    await Get.toNamed(Routes.CHAT);
   }
 }
 

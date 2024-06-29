@@ -65,15 +65,18 @@ class AppPages {
       binding: NotificationBinding(),
     ),
     GetPage(
-      name: _Paths.CHAT,
-      page: () => const ChatView(),
-      binding: ChatBinding(),
-    ),
-
-    GetPage(
       name: _Paths.MAP_GPS,
       page: () => const MapGpsView(),
       binding: MapGpsBinding(),
+    ),
+
+    //* Chat
+    GetPage(
+      name: _Paths.CHAT,
+      page: () => const ChatView(),
+      binding: ChatBinding(),
+      transition: Transition.fade,
+      transitionDuration: $r.times.fast,
     ),
   ];
 }
