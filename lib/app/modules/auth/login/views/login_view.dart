@@ -102,7 +102,9 @@ class LoginView extends GetView<LoginController> {
                       child: Container(
                         height: 0.7.sh,
                         width: width.sw,
-                        padding: const EdgeInsetsDirectional.all(32),
+                        padding: const EdgeInsetsDirectional.symmetric(
+                          horizontal: 32,
+                        ),
                         decoration: BoxDecoration(
                           color: Theme.of(context).colorScheme.onInverseSurface,
                           borderRadius: BorderRadius.only(
@@ -113,6 +115,17 @@ class LoginView extends GetView<LoginController> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 24),
+                              child: Text(
+                                localeLang.signIn,
+                                textAlign: TextAlign.start,
+                                style: $r.styles.pBold.copyWith(
+                                  fontSize: 24,
+                                  color: $r.theme.black,
+                                ),
+                              ),
+                            ),
                             Expanded(
                               child: SizedBox(
                                 height: height.h,
@@ -174,7 +187,8 @@ class LoginView extends GetView<LoginController> {
                                     ),
                                     const Expanded(
                                       child: Padding(
-                                        padding: EdgeInsets.only(top: 24),
+                                        padding:
+                                            EdgeInsets.symmetric(vertical: 16),
                                         child: LoginErrorMessage(),
                                       ),
                                     ),

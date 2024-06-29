@@ -10,11 +10,11 @@ class AppTheme extends GetXState {
     return FlexThemeData.light(
       colorScheme: const ColorScheme(
         brightness: Brightness.light,
-        primary: Color(0xff0041c0),
+        primary: Color(0xff37B7C3),
         onPrimary: Color(0xffF5F5F5),
         primaryContainer: Color(0xffdce1ff),
         onPrimaryContainer: Color(0xff0d0d0e),
-        secondary: Color(0xff004AD7),
+        secondary: Color(0xff135D66),
         onSecondary: Color(0xffF5F5F5),
         secondaryContainer: Color(0xffdee1f9),
         onSecondaryContainer: Color(0xff0d0d0e),

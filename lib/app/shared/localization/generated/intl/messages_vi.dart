@@ -24,10 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "TDS": MessageLookupByLibrary.simpleMessage("TDS"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Đã có tài khoản?"),
         "backToLogin":
             MessageLookupByLibrary.simpleMessage("Quay lại đăng nhập"),
+        "beforeLogout": MessageLookupByLibrary.simpleMessage(
+            "Bạn có chắc chắn muốn đăng xuất?"),
         "cancel": MessageLookupByLibrary.simpleMessage("Hủy"),
         "chat": MessageLookupByLibrary.simpleMessage("Trò chuyện"),
         "clearForm": MessageLookupByLibrary.simpleMessage("Xóa"),
@@ -77,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "none": MessageLookupByLibrary.simpleMessage("Không có"),
         "notification": MessageLookupByLibrary.simpleMessage("Thông báo"),
         "ok": MessageLookupByLibrary.simpleMessage("Đồng ý"),
+        "pH": MessageLookupByLibrary.simpleMessage("pH"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordInvalid":
             MessageLookupByLibrary.simpleMessage("Mật khẩu không hợp lệ"),
@@ -94,6 +98,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("Tìm kiếm"),
         "searchLocation": MessageLookupByLibrary.simpleMessage("Tìm kiếm..."),
         "secondsAgo": MessageLookupByLibrary.simpleMessage("giây trước"),
+        "signIn": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
+        "signUp": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "somethingWentWrongAgain": MessageLookupByLibrary.simpleMessage(
             "Có lỗi xảy ra, vui lòng thử lại sau"),
         "success": MessageLookupByLibrary.simpleMessage("Thành công"),

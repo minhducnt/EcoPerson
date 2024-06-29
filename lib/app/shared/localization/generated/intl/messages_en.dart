@@ -24,9 +24,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "TDS": MessageLookupByLibrary.simpleMessage("TDS"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "backToLogin": MessageLookupByLibrary.simpleMessage("Back to login"),
+        "beforeLogout": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to logout?"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "chat": MessageLookupByLibrary.simpleMessage("Chat"),
         "clearForm": MessageLookupByLibrary.simpleMessage("Clear"),
@@ -71,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "none": MessageLookupByLibrary.simpleMessage("None"),
         "notification": MessageLookupByLibrary.simpleMessage("Notification"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "pH": MessageLookupByLibrary.simpleMessage("pH"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordInvalid":
             MessageLookupByLibrary.simpleMessage("Password is invalid"),
@@ -89,6 +93,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchLocation":
             MessageLookupByLibrary.simpleMessage("Search location"),
         "secondsAgo": MessageLookupByLibrary.simpleMessage("seconds ago"),
+        "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "signUp": MessageLookupByLibrary.simpleMessage("Sign up"),
         "somethingWentWrongAgain": MessageLookupByLibrary.simpleMessage(
             "Something went wrong, please try again later"),
         "success": MessageLookupByLibrary.simpleMessage("Success"),

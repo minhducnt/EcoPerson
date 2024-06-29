@@ -310,6 +310,36 @@ class I10n {
     );
   }
 
+  /// `Are you sure you want to logout?`
+  String get beforeLogout {
+    return Intl.message(
+      'Are you sure you want to logout?',
+      name: 'beforeLogout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in`
+  String get signIn {
+    return Intl.message(
+      'Sign in',
+      name: 'signIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up`
+  String get signUp {
+    return Intl.message(
+      'Sign up',
+      name: 'signUp',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Loading...`
   String get loading {
     return Intl.message(
@@ -665,6 +695,26 @@ class I10n {
     return Intl.message(
       'Search location',
       name: 'searchLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `pH`
+  String get pH {
+    return Intl.message(
+      'pH',
+      name: 'pH',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `TDS`
+  String get TDS {
+    return Intl.message(
+      'TDS',
+      name: 'TDS',
       desc: '',
       args: [],
     );

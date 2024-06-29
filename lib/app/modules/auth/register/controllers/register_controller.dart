@@ -22,7 +22,7 @@ class RegisterController extends BaseController {
   };
 
   //* Getters
-  GlobalKey<FormBuilderState> get formKey => $r.keys.passwordFormKey;
+  GlobalKey<FormBuilderState> get formKey => $r.keys.registerFormKey;
   bool get passwordShown => showPassword.value = !showPassword.value;
   bool get allFieldsFilled => fieldStatus.values.every((e) => e.value);
 
@@ -39,33 +39,38 @@ class RegisterController extends BaseController {
     errorMessage = output.isNotEmpty ? output : ''.obs;
   }
 
-  Future<void> signUpUser({
-    required String username,
-    required String password,
-    required String email,
-  }) async {
+  Future<void> onRegister() async {
+    FocusScope.of(gContext).requestFocus(FocusNode());
+    updateErrorMessage('');
+
+    //* Validate form
+    final formKey = $r.keys.registerFormKey.currentState;
+    if (!formKey!.validate()) return;
+
+    showLoading();
+
     try {
-      final userAttributes = {
-        AuthUserAttributeKey.email: email,
-      };
       final result = await Amplify.Auth.signUp(
-        username: username,
-        password: password,
+        username: formKey.fields['username']?.value.trim() ?? '',
+        password: formKey.fields['password']?.value.trim() ?? '',
         options: SignUpOptions(
-          userAttributes: userAttributes,
+          userAttributes: {
+            AuthUserAttributeKey.email:
+                formKey.fields['email']?.value.trim() ?? '',
+          },
         ),
       );
-      await handleSignUpResult(result, username);
+      await handleSignUpResult(
+        result,
+        formKey.fields['username']?.value.trim() ?? '',
+      );
     } on AuthException catch (e) {
       await AppUtils.showSnackBar(
         message: e.message,
         type: SnackBarType.error,
       );
-    } catch (e) {
-      await AppUtils.showSnackBar(
-        message: e.toString(),
-        type: SnackBarType.error,
-      );
+    } finally {
+      hideLoading();
     }
   }
 

@@ -7,10 +7,8 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import 'package:angelhack_hcm/app/data/di.dart';
-import 'package:angelhack_hcm/app/modules/auth/login/components/login_component.dart';
 import 'package:angelhack_hcm/app/shared/constants/resources/assets.gen.dart';
 import 'package:angelhack_hcm/app/shared/utils/ui_utils.dart';
-import 'package:angelhack_hcm/app/shared/widgets/base/base_silver_view.dart';
 import 'package:angelhack_hcm/app/shared/widgets/button_container.dart';
 import 'package:angelhack_hcm/app/shared/widgets/forms/form_wrapper.dart';
 import 'package:angelhack_hcm/app/shared/widgets/forms/text_field.dart';
@@ -19,11 +17,11 @@ import 'package:angelhack_hcm/app/shared/widgets/utils/svg_asset.dart';
 
 import '../controllers/register_controller.dart';
 
-class RegisterView extends BaseSilverView<RegisterController> {
+class RegisterView extends GetView<RegisterController> {
   const RegisterView({super.key});
 
   @override
-  Widget body(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
@@ -119,7 +117,7 @@ class RegisterView extends BaseSilverView<RegisterController> {
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 24),
                               child: Text(
-                                localeLang.welcome,
+                                localeLang.signUp,
                                 textAlign: TextAlign.start,
                                 style: $r.styles.pBold.copyWith(
                                   fontSize: 24,
@@ -190,6 +188,7 @@ class RegisterView extends BaseSilverView<RegisterController> {
                                                 ),
                                               ),
                                             ),
+                                            const Gap(8),
 
                                             //* Email
                                             AppTextField(
@@ -211,10 +210,6 @@ class RegisterView extends BaseSilverView<RegisterController> {
                                           ],
                                         ),
                                       ),
-                                    ),
-                                    const Padding(
-                                      padding: EdgeInsets.only(top: 24),
-                                      child: LoginErrorMessage(),
                                     ),
                                   ],
                                 ),
@@ -242,23 +237,7 @@ class RegisterView extends BaseSilverView<RegisterController> {
                                           .onPrimary,
                                       borderColor:
                                           Theme.of(context).colorScheme.primary,
-                                      onPressed: () => controller.signUpUser(
-                                        username: controller
-                                                .formKey
-                                                .currentState
-                                                ?.fields['username']
-                                                ?.value ??
-                                            '',
-                                        password: controller
-                                                .formKey
-                                                .currentState
-                                                ?.fields['password']
-                                                ?.value ??
-                                            '',
-                                        email: controller.formKey.currentState
-                                                ?.fields['email']?.value ??
-                                            '',
-                                      ),
+                                      onPressed: () => controller.onRegister(),
                                     ),
                                   ),
                                 ),

@@ -55,6 +55,12 @@
 	},
 	"resentCode": "Resend code",
 	"@resentCode": {},
+	"beforeLogout": "Are you sure you want to logout?",
+	"@beforeLogout": {},
+	"signIn": "Sign in",
+	"@signIn": {},
+	"signUp": "Sign up",
+	"@signUp": {},
 	"@_UTILS": {},
 	"loading": "Loading...",
 	"@loading": {},
@@ -132,5 +138,9 @@
 	"currentLocation": "Current location",
 	"@currentLocation": {},
 	"searchLocation": "Search location",
-	"@searchLocation": {}
+	"@searchLocation": {},
+	"pH": "pH",
+	"@pH": {},
+	"TDS": "TDS",
+	"@TDS": {}
 }

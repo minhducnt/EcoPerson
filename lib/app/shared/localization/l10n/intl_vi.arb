@@ -55,6 +55,12 @@
 	},
 	"resentCode": "Gửi lại mã",
 	"@resentCode": {},
+	"beforeLogout": "Bạn có chắc chắn muốn đăng xuất?",
+	"@beforeLogout": {},
+	"signIn": "Đăng nhập",
+	"@signIn": {},
+	"signUp": "Đăng ký",
+	"@signUp": {},
 	"@_UTILS": {},
 	"loading": "Đang tải...",
 	"@loading": {},
@@ -133,5 +139,9 @@
 	"currentLocation": "Vị trí hiện tại",
 	"@currentLocation": {},
 	"searchLocation": "Tìm kiếm...",
-	"@searchLocation": {}
+	"@searchLocation": {},
+	"pH": "pH",
+	"@pH": {},
+	"TDS": "TDS",
+	"@TDS": {}
 }
