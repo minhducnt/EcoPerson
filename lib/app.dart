@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import 'package:angelhack_hcm/app/data/binding.dart';
 import 'package:angelhack_hcm/app/shared/localization/generated/l10n.dart';
 
 import 'app/data/di.dart';
@@ -77,6 +78,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                     : $r.defaultLocale,
             getPages: AppPages.routes,
             initialRoute: AppPages.INITIAL,
+            initialBinding: AppBinding(),
           ),
         ),
       ),

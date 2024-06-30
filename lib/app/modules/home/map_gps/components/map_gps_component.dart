@@ -1,3 +1,6 @@
+import 'package:angelhack_hcm/app/data/models/node.response.dart';
+import 'package:angelhack_hcm/app/shared/constants/enums/tds_status.dart';
+import 'package:angelhack_hcm/app/shared/utils/helpers/date.dart';
 import 'package:angelhack_hcm/app/shared/utils/ui_utils.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
@@ -42,14 +45,12 @@ class SeparatedColumn extends StatelessWidget {
 }
 
 class MapGPSItem extends StatelessWidget {
+  final NodeResponse node;
+
   const MapGPSItem({
-    required this.title,
-    required this.subtitle,
+    required this.node,
     super.key,
   });
-
-  final String title;
-  final String subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -88,8 +89,19 @@ class MapGPSItem extends StatelessWidget {
                 Container(
                   width: 80.w,
                   decoration: BoxDecoration(
-                    color: $r.theme.grey2,
+                    color: TDSStatusHelper.getColor(
+                      TDSStatusHelper.getName(node.status ?? 'unknown'),
+                    ),
                     borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Center(
+                    child: Icon(
+                      TDSStatusHelper.getIcon(
+                        TDSStatusHelper.getName(node.status ?? 'unknown'),
+                      ),
+                      size: 40.sp,
+                      color: Theme.of(context).colorScheme.onSurface,
+                    ),
                   ),
                 ),
                 Expanded(
@@ -103,7 +115,7 @@ class MapGPSItem extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '10:45 25/06/2024',
+                          convertDateTime(node.lastUpdate ?? ''),
                           style: TextStyle(
                             fontSize: 14,
                             color: Theme.of(context).colorScheme.onSurface,
@@ -137,7 +149,7 @@ class MapGPSItem extends StatelessWidget {
                                       ),
                                       const Spacer(),
                                       Text(
-                                        '7.5',
+                                        '${node.ph}',
                                         style: $r.styles.pRegular.copyWith(
                                           fontSize: 14,
                                           color: Theme.of(context)
@@ -171,7 +183,7 @@ class MapGPSItem extends StatelessWidget {
                                       ),
                                       const Spacer(),
                                       Text(
-                                        '200',
+                                        '${node.tds}',
                                         style: $r.styles.pRegular.copyWith(
                                           fontSize: 14,
                                           color: Theme.of(context)

@@ -49,3 +49,19 @@ double handleChangeInputNumber(String? input, String type, double increment) {
     return 0;
   }
 }
+
+extension IterableExtensions<E> on Iterable<E> {
+  Iterable<List<E>> chunked(int chunkSize) sync* {
+    if (length <= 0) {
+      yield [];
+      return;
+    }
+    var skip = 0;
+    while (skip < length) {
+      final chunk = this.skip(skip).take(chunkSize);
+      yield chunk.toList(growable: false);
+      skip += chunkSize;
+      if (chunk.length < chunkSize) return;
+    }
+  }
+}

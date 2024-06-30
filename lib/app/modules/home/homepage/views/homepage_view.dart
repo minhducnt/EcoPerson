@@ -7,7 +7,6 @@ import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:heroicons/heroicons.dart';
 
 import 'package:angelhack_hcm/app/data/di.dart';
-import 'package:angelhack_hcm/app/shared/utils/ui_utils.dart';
 import 'package:angelhack_hcm/app/shared/widgets/base/base_silver_view.dart';
 
 import '../controllers/homepage_controller.dart';
@@ -76,23 +75,6 @@ class HomepageView extends BaseSilverView<HomepageController> {
               ],
             ),
           ),
-          floatingActionButton: FloatingActionButton(
-            heroTag: 'chat',
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            elevation: 1,
-            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            onPressed: controller.onNavigateChat,
-            shape: const CircleBorder(),
-            tooltip: localeLang.chat,
-            child: HeroIcon(
-              HeroIcons.chatBubbleOvalLeft,
-              style: HeroIconStyle.outline,
-              size: 24.sp,
-              color: $r.theme.white,
-            ),
-          ),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerDocked,
           body: PageView(
             controller: controller.pageController,
             onPageChanged: (value) => controller.onItemSwipe(value),

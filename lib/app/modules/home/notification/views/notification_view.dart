@@ -129,20 +129,17 @@ class NotificationView extends GetView<NotificationController> {
                               pgCtrl: controller.pagingController,
                               index: controller.pagingController.itemList
                                   ?.elementAt(index)
-                                  .id,
+                                  .notifyId,
                               title: controller.pagingController.itemList
                                   ?.elementAt(index)
                                   .title,
                               content: controller.pagingController.itemList
                                   ?.elementAt(index)
-                                  .content,
+                                  .body,
                               timeDifferent: controller
                                   .pagingController.itemList
                                   ?.elementAt(index)
-                                  .timeDiff,
-                              isRead: controller.pagingController.itemList
-                                  ?.elementAt(index)
-                                  .isRead,
+                                  .timestamp,
                             ),
                           ),
                         ),
