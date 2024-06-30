@@ -38,21 +38,6 @@ extension TDSStatusHelper on TDSStatus {
     }
   }
 
-  // static Color getColor(String? value) {
-  //   final status = TDSStatus.values
-  //       .firstWhere((e) => e.name.toLowerCase() == value?.toLowerCase());
-  //   switch (status) {
-  //     case TDSStatus.NORMAL:
-  //       return Colors.green;
-  //     case TDSStatus.POLLUTED:
-  //       return Colors.red;
-  //     case TDSStatus.UNKNOWN:
-  //       return Colors.grey;
-  //     default:
-  //       return Colors.grey;
-  //   }
-  // }
-
   static Color getColorPH(double? value) {
     if (value == null) {
       return Colors.grey;
@@ -63,6 +48,19 @@ extension TDSStatusHelper on TDSStatus {
       return Colors.red;
     } else {
       return Colors.green;
+    }
+  }
+
+  static IconData getIconPH(double? value) {
+    if (value == null) {
+      return FluentIcons.dismiss_circle_24_regular;
+    }
+    if (value < 6.5) {
+      return FluentIcons.emoji_sad_24_regular;
+    } else if (value > 8.5) {
+      return FluentIcons.emoji_sad_24_regular;
+    } else {
+      return FluentIcons.emoji_24_regular;
     }
   }
 }

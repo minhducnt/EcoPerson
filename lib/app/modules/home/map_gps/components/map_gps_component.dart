@@ -1,19 +1,18 @@
+import 'package:flutter/material.dart';
+
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+
+import 'package:angelhack_hcm/app/data/di.dart';
 import 'package:angelhack_hcm/app/data/models/node.response.dart';
 import 'package:angelhack_hcm/app/routes/app_pages.dart';
 import 'package:angelhack_hcm/app/shared/constants/enums/tds_status.dart';
+import 'package:angelhack_hcm/app/shared/styles/app_design.dart';
 import 'package:angelhack_hcm/app/shared/utils/helpers/date.dart';
 import 'package:angelhack_hcm/app/shared/utils/ui_utils.dart';
 import 'package:angelhack_hcm/app/shared/widgets/utils/tap_splash.dart';
-import 'package:fluentui_system_icons/fluentui_system_icons.dart';
-import 'package:flutter/material.dart';
-
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gap/gap.dart';
-
-import 'package:angelhack_hcm/app/data/di.dart';
-import 'package:angelhack_hcm/app/shared/styles/app_design.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class SeparatedColumn extends StatelessWidget {
   const SeparatedColumn({
@@ -104,8 +103,8 @@ class MapGPSItem extends StatelessWidget {
                     ),
                     child: Center(
                       child: Icon(
-                        TDSStatusHelper.getIcon(
-                          TDSStatusHelper.getName(node.status ?? 'unknown'),
+                        TDSStatusHelper.getIconPH(
+                          double.tryParse(node.ph ?? ''),
                         ),
                         size: 40.sp,
                         color: Theme.of(context).colorScheme.onSurface,

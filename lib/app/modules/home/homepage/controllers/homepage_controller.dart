@@ -110,11 +110,6 @@ class HomepageController extends BaseController
   void onTabChange(int index) {
     currentTabIndex.value = index;
 
-    if (index == 0) {
-      final mapGpsController = Get.find<MapGpsController>();
-      mapGpsController.startNodeUpdates();
-    }
-
     if (index == 1) {
       hasNotification.value = false;
       final notificationController = Get.find<NotificationController>();
