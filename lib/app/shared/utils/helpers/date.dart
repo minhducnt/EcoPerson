@@ -1,10 +1,11 @@
 import 'package:intl/intl.dart';
 
-
 String getDifferentTime(String timeDiff) {
   final dateTime = DateTime.parse(timeDiff);
   final now = DateTime.now();
-  final difference = now.difference(dateTime);
+  final difference = dateTime.isAfter(now)
+      ? dateTime.difference(now)
+      : now.difference(dateTime);
 
   final seconds = difference.inSeconds;
   final minutes = difference.inMinutes;

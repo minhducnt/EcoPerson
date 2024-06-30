@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:angelhack_hcm/app/data/di.dart';
 import 'package:angelhack_hcm/app/modules/home/map_gps/components/map_gps_component.dart';
 import 'package:angelhack_hcm/app/shared/constants/enums/tds_status.dart';
 import 'package:angelhack_hcm/app/shared/widgets/utils/tap_splash.dart';
@@ -25,6 +26,7 @@ class MapGpsController extends BaseController with GetTickerProviderStateMixin {
   final nodeRepo = Get.find<NodeRepository>();
 
   //* Variables
+  Timer? timer;
   final List<dynamic>? listData = [];
   final markers = <AnimatedMarker>[].obs;
 
@@ -48,7 +50,14 @@ class MapGpsController extends BaseController with GetTickerProviderStateMixin {
   void onClose() {
     markers.clear();
     animatedMapController?.dispose();
+    timer?.cancel();
     super.onClose();
+  }
+
+  void startNodeUpdates() {
+    timer?.cancel();
+    onShowNode();
+    timer = Timer.periodic($r.times.fast, (t) => onShowNode());
   }
 
   //* Methods

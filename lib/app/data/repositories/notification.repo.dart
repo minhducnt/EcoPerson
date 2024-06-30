@@ -43,7 +43,7 @@ final jsonData = '''
               "S": "Hi bao, the water near you is currently polluted. Please be careful!"
           },
           "timestamp": {
-              "S": "2024-06-29T19:37:13.823781"
+              "S": "${DateTime.now().add(const Duration(seconds: 32)).toIso8601String()}"
           }
       },
       {
@@ -555,4 +555,6 @@ class NotificationRepository extends GetxService {
     final data = jsonDecode(jsonData) as List<dynamic>;
     return data.map((e) => NotificationResponse.fromJson(e)).toList();
   }
+
+  void onRefresh() {}
 }

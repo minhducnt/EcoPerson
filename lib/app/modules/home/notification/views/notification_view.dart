@@ -71,7 +71,7 @@ class NotificationView extends GetView<NotificationController> {
                           FluentIcons.text_grammar_checkmark_20_regular,
                           color: $r.theme.white,
                         ),
-                        onPressed: () => controller.markAllAsRead(),
+                        onPressed: () => {},
                       ),
                   ],
                 ),
