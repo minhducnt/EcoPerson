@@ -89,8 +89,8 @@ class MapGPSItem extends StatelessWidget {
                 Container(
                   width: 80.w,
                   decoration: BoxDecoration(
-                    color: TDSStatusHelper.getColor(
-                      TDSStatusHelper.getName(node.status ?? 'unknown'),
+                    color: TDSStatusHelper.getColorPH(
+                      double.tryParse(node.ph ?? ''),
                     ),
                     borderRadius: BorderRadius.circular(6),
                   ),

@@ -128,8 +128,8 @@ class MapGpsController extends BaseController with GetTickerProviderStateMixin {
                   width: 40,
                   padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
-                    color: TDSStatusHelper.getColor(
-                      TDSStatusHelper.getName(node.status ?? 'unknown'),
+                    color: TDSStatusHelper.getColorPH(
+                      double.tryParse(node.ph ?? ''),
                     ),
                     borderRadius: BorderRadius.circular(32),
                   ),

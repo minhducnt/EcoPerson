@@ -89,7 +89,7 @@ class HomepageController extends BaseController
   }
 
   Future<void> getInAppSystem() async {
-    pageController = PageController();
+    pageController = PageController(initialPage: currentTabIndex.value);
   }
 
   Future<void> onNavigateChat() async {
