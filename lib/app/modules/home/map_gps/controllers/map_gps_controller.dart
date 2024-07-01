@@ -37,7 +37,7 @@ class MapGpsController extends BaseController with GetTickerProviderStateMixin {
   LatLng currentLocation = const LatLng(0, 0);
 
   void startRefreshTimer() {
-    const tenMinutes = Duration(seconds: 5);
+    const tenMinutes = Duration(seconds: 30);
     refreshTimer = Timer.periodic(tenMinutes, (t) => onShowNode());
   }
 

@@ -89,7 +89,7 @@ class NotificationItem extends GetView<NotificationController> {
                           ),
                           Text(
                             isNullOrEmpty(content) ? localeLang.none : content!,
-                            overflow: TextOverflow.ellipsis,
+                            overflow: TextOverflow.clip,
                             style: $r.styles.pMedium.copyWith(
                               fontSize: 12,
                               color: $r.theme.black,
