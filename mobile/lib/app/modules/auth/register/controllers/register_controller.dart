@@ -77,7 +77,7 @@ class RegisterController extends BaseController {
   Future<void> handleSignUpResult(SignUpResult result, String username) async {
     switch (result.nextStep.signUpStep) {
       case AuthSignUpStep.confirmSignUp:
-        final codeDeliveryDetails = result.nextStep.codeDeliveryDetails!;
+        final codeDeliveryDetails = result.nextStep.codeDeliveryDetails;
         await handleCodeDelivery(codeDeliveryDetails, username);
       case AuthSignUpStep.done:
         await Get.offNamed(Routes.LOGIN);

@@ -2,15 +2,24 @@
 
 ## Team Members
 
-- BanhsBao, Duc, Mi, Dung.
+- [BanhsBao (Leader)](https://github.com/banhsbao)
+- [Duck (Mobile)](https://github.com/minhducnt)
+- [Dung (AI)](https://github.com/NTDung93)
+- [Mi (QA)](https://github.com/Mi)
 
 ## Overview
 
 The EcoPerson project addresses serious environmental issues in Hồ Chí Minh City, particularly water pollution caused by illegal discharges into rivers and a lack of environmental awareness among local residents. This initiative employs IoT devices installed in rivers, alongside AWS services, to measure and monitor water quality changes. When unusual changes in water quality are detected, the system automatically sends notifications to app users within a specific radius, helping residents stay informed and take timely actions to reduce pollution. By doing so, EcoPerson contributes to raising environmental awareness and encouraging the community to protect clean water sources.
 
-## Architecture
+![EcoPerson Concept](images/concept.jpeg)
 
-![Architecture](images/architecture-bg.png)
+## Overview Architecture
+
+![Overview Architecture](images/HCM_Hackathon_2024_Ardruino.drawio.png)
+
+## AWS Architecture
+
+![Solution Architecture](images/architecture-bg.png)
 
 ## Tech Stack
 
@@ -55,6 +64,7 @@ The EcoPerson project addresses serious environmental issues in Hồ Chí Minh C
 - **Environmental Impact**: Raises awareness and encourages community actions to protect water sources.
 
 ### Find and alert users in polluted area
+
 ![Architecture](images/geohash01.png)
 ![Architecture](images/geohash02.png)
 ![Architecture](images/geohash03.png)
@@ -72,3 +82,11 @@ The EcoPerson project addresses serious environmental issues in Hồ Chí Minh C
 6. **Implement Generative AI**: Utilize AWS Bedrock to enhance AI capabilities within the application.
 7. **Create Notification System**: Configure AWS SNS and Firebase to send real-time alerts to users.
 8. **Deploy User-Facing Application**: Develop and deploy the user application using AWS AppSync, Cognito, and API Gateway.
+
+## Conclusion
+
+This project provides a comprehensive solution for monitoring and protecting water quality using IoT technology and AWS services. The architecture ensures real-time data processing, storage, and analysis to detect and respond to water pollution effectively.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.

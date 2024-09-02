@@ -31,7 +31,7 @@ class AppValidator {
   static final confirmPassword = FormBuilderValidators.compose([
     password,
     (val) {
-      final formKey = $r.keys.passwordFormKey.currentState!;
+      final formKey = $r.keys.passwordFormKey.currentState;
       if (val != null && val != formKey.fields['newPassword']?.value) {
         return localeLang.passwordNotMatch;
       }

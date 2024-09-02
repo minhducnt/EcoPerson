@@ -84,7 +84,7 @@ class LoginController extends BaseController {
 
     switch (result.nextStep.signInStep) {
       case AuthSignInStep.confirmSignInWithSmsMfaCode:
-        final codeDeliveryDetails = result.nextStep.codeDeliveryDetails!;
+        final codeDeliveryDetails = result.nextStep.codeDeliveryDetails;
         _handleCodeDelivery(codeDeliveryDetails);
 
       //
@@ -94,7 +94,7 @@ class LoginController extends BaseController {
       //
       case AuthSignInStep.confirmSignInWithCustomChallenge:
         final parameters = result.nextStep.additionalInfo;
-        final prompt = parameters['prompt']!;
+        final prompt = parameters['prompt'];
         safePrint(prompt);
 
       //
